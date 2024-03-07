@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YouTube Downloader built with React & Node.js
 
-## Getting Started
+<p align="center">
+Just paste a link or search to download your video. The available formats are mp4, mp3, mov and flv.
+</p>
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Built in search 🔍
+- 4 formats 🤘
+- Fast in grabbing information and downloading 🚀
+- "Show More" Button at the end of suggestions for more suggestions
+- Suggestions 🦾
+- Download History (safe in localStorage) 🗃️
+- Responsive and built with [Chakra-UI](https://chakra-ui.com/) Framework 😎
+- Also usable on iOS & Android 📱
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Coming Soon
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Trends Page/Top 100 most downloaded videos (maybe with filters: regionCode, category, ...)
+- Playlist-Downloads
+- Show progressbar for download-state
+- Quality choice (480p, 720p, 1080p, 4k)
+- Fast batch download (insert multiple urls and download automatically)
+- Preview video before download
+- Edit start and end points of a video
+- Contact form for submitting features or bugs
+- Deploy a chrome extension (possible? allowed?)
+- Electron desktop app (.exe file downloadable)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Feature on [youtubdle.com](https://youtubdle.com)
 
-## Learn More
+Direct download while not leaving YouTube: paste **dl** between youtub**dl**e.com and direct download the video!
 
-To learn more about Next.js, take a look at the following resources:
+## Example
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+From: `https://www.youtube.com/watch?v=dvgZkm1xWPE` to: `https://www.youtubdle.com/watch?v=dvgZkm1xWPE`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/download_preview.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/suggestions.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/download_preview_dark.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/suggestions_dark.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/download_preview_loading.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/suggestions_loading.png)
+![](https://raw.githubusercontent.com/bennymeier/new-youtube-downloader/master/.github/changelog.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Backend
+
+- Node.js
+- Express
+- Mongoose
+
+### Frontend
+
+- React
+- TypeScript
+- axios
+- Chakra-UI
+
+## How to setup
+
+### Backend
+
+Edit `nodemon.json` and fill in your personal YouTube-API-Key and MongoDB URL (`MONGODB_URL`, `YOUTUBE_KEY`)
+In the project directory you can run:
+
+`yarn install`
+
+`yarn dev` for starting backend
+
+### Frontend
+
+Switch to frontend with `cd client`
+In the project directory you can run:
+
+`yarn install`
+
+`yarn start` for starting frontend
